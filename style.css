@@ -1,45 +1,54 @@
 html, body {
-    width: 99%;
-    height: 99%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif; /* Додав шрифт з підтримкою кирилиці */
 }
 
 body {
-    background: linear-gradient(45deg, rgb(247, 147, 164), #ffffff);
-    background-size: 200% 200%;
+    background:rgb(247, 147, 164);
+    background-size: cover; /* Замінив background-size на cover, щоб забезпечити повне покриття */
+    text-align: center;
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 70px; /* Використовуємо rem для розміру шрифту */
+    text-align: center;
+    margin-top: 0; /* Додав margin-top, щоб відступити від верхнього краю */
+    padding-top: 20px; /* Додав padding-top, щоб зберегти відстань від верхнього краю для контенту */
 }
 
-.left-container, .right-container {
-    font-size: 50px;
-    font-weight: 200;
-    width: 40%;
+.container {
+    font-size: 1.5rem; /* Збільшив розмір шрифту для кращої читабельності */
+    width: 50%; /* Збільшив ширину до 50%, щоб рівномірно розподілити контейнери */
     padding: 20px;
+    box-sizing: border-box;
+    display: inline-block; /* Замінив float на inline-block для кращого керування блоками */
+    vertical-align: top; /* Вирівняв блоки по верхньому краю */
+}
+.scale{
+    transition: 1.5s;
+}
+.scale:hover {
+    transform: scale(1.2); /* Збільшення масштабу при наведенні на зображення */
 }
 
-.left-container {
-    float: left;
+.scale {
+    width: 400px; 
+    height: 500px;
 }
 
-.right-container {
-    float: right;
+p{
+    font-size: 40px;
 }
 
-.onscroll-hidden {
-    opacity: 1;
-    transition: opacity 0.5s ease;
+.head-photo{
+    width: 600px; 
+    height: 600px;
+    transition: 1.5s;
 }
 
-.onscroll-show {
-    opacity: 1;
-    margin-top: 120px;
-    transition: opacity 1.5s ease, margin-top 1s ease;
-}
-
-img {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
+.head-photo:hover {
+    transform: scale(1.2); /* Збільшення масштабу при наведенні на зображення */
 }
